@@ -11,7 +11,7 @@ export default function CheckOut() {
     }
 
     async function fetchCheck(shippingAddress) {
-        let res = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${id}?url=https://ahmed-samir4.github.io/E-commerce/#/allorders`, { shippingAddress }, { headers: { token: localStorage.getItem('token') } })
+        let res = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${id}?url=https://ahmed-samir4.github.io/E-commerce/#`, { shippingAddress }, { headers: { token: localStorage.getItem('token') } })
 
         console.log(res);
         window.location.href = res?.data.session.url
